@@ -6,4 +6,8 @@ module.exports = {
     '@storybook/addon-notes/register',
     '@storybook/addon-docs',
     ],
+    presets: ['@storybook/addon-docs/preset']
     };
+
+
+module.exports = [];

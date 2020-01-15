@@ -1,8 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import ClassicButton from './ClassicButton';
+import Button from './Button';
 
-describe('Classic Button', () => {
+describe('Button', () => {
 it('returns a react component', () => {
     expect(typeof Button).toBe('function');
 });
