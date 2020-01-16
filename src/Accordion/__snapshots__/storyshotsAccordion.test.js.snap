@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Accordion with three items, all closed 1`] = `
+<div>
+  <div>
+    <h3
+      className="AccordionItem__AccordionItemHeader-sc-1iqfqnl-0 gLsqLa"
+    >
+      Panel 1
+    </h3>
+  </div>
+  <div>
+    <h3
+      className="AccordionItem__AccordionItemHeader-sc-1iqfqnl-0 gLsqLa"
+    >
+      Panel 2
+    </h3>
+  </div>
+  <div>
+    <h3
+      className="AccordionItem__AccordionItemHeader-sc-1iqfqnl-0 gLsqLa"
+    >
+      Panel 3
+    </h3>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Accordion with three items, second item open 1`] = `
+<div>
+  <div>
+    <h3
+      className="AccordionItem__AccordionItemHeader-sc-1iqfqnl-0 gLsqLa"
+    >
+      Panel 1
+    </h3>
+  </div>
+  <div>
+    <h3
+      className="AccordionItem__AccordionItemHeader-sc-1iqfqnl-0 gLsqLa"
+    >
+      Panel 2
+    </h3>
+    <p>
+      some content for panel 2
+    </p>
+  </div>
+  <div>
+    <h3
+      className="AccordionItem__AccordionItemHeader-sc-1iqfqnl-0 gLsqLa"
+    >
+      Panel 3
+    </h3>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button with background 1 1`] = `
+<button
+  className="Button__StyledButton-sc-1uv0hzm-0 eUxZid"
+  style={
+    Object {
+      "backgroundColor": "#4CAF50",
+    }
+  }
+>
+  Success
+</button>
+`;
+
+exports[`Storyshots Button with background 2 1`] = `
+<button
+  className="Button__StyledButton-sc-1uv0hzm-0 eUxZid"
+  style={
+    Object {
+      "backgroundColor": "#2196f3",
+    }
+  }
+>
+  Info
+</button>
+`;
+
+exports[`Storyshots Welcome to the Lego Storybook Repo 🎉 1`] = `
+<h1>
+   Welcome to the team's Mock Storybook
+</h1>
+`;
