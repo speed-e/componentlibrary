@@ -1,7 +1,9 @@
 name: Node CI
 
 on: [push]
-
+      paths-ignore:
+      - '**/*-.test.js'
+      
 jobs:
   build:
 
@@ -33,6 +35,7 @@ jobs:
 
     - name: npm test
       run: |
+  
         npm test --if-present
         
       env:
