@@ -4,11 +4,6 @@ import 'jest-styled-components';
 import AccordionItem from './AccordionItem';
 
 describe('AccordionItem', () => {
-const requiredProps = {
-    id: '0',
-    onButtonClick: () => {},
-    title: ''
-};
 
 it('returns a react component', () => {
     expect(typeof AccordionItem).toBe('function');
@@ -24,9 +19,9 @@ it('renders the correct default styles', () => {
 
 it('renders the correct open styles', () => {
     const wrapper = mount(
-    <AccordionItem {...requiredProps} isOpen>
-        <p>children</p>
-    </AccordionItem>
+        <AccordionItem {...requiredProps} isOpen>
+            <p>children</p>
+        </AccordionItem>
     );
     expect(wrapper).toMatchSnapshot();
 });

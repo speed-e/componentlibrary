@@ -13,8 +13,4 @@ it('renders the default and styles', () => {
     expect(wrapper).toMatchSnapshot();
 });
 
-it('renders the wrapped and styles', () => {
-    const wrapper = mount(<Accordion wrapped />);
-    expect(wrapper).toMatchSnapshot();
-});
 });
