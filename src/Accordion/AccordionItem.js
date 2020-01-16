@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-const AccordionItemHeader = styled.h3`
+const StyledAccordionItemHeader = styled.h3`
 background-color: #eee;
 color: #444;
 cursor: pointer;
@@ -11,6 +11,20 @@ text-align: left;
 border: none;
 outline: none;
 transition: 0.4s;
+font-family: Arial;
+font-size:12px;
+`;
+
+const StyledAccordionContent = styled.p`
+color: #444;
+font-family: Arial;
+font-size: 10px;
+cursor: pointer;
+padding: 5px;
+width: 100%;
+transition: 0.4s;
+text-align: left;
+cursor: pointer;
 `;
 
 const AccordionItem = ({
@@ -21,8 +35,8 @@ const AccordionItem = ({
   return (
       
     <div>
-      <AccordionItemHeader>{title}</AccordionItemHeader>
-      {!!(isOpen) && <p>{content}</p>}
+      <StyledAccordionItemHeader>{title}</StyledAccordionItemHeader>
+      {!!(isOpen) && <StyledAccordionContent>{content}</StyledAccordionContent>}
     </div>
   )
 };
