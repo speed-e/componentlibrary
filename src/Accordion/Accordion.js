@@ -1,6 +1,5 @@
 import React from 'react';
 import AccordionItem from './AccordionItem';
-// import styled from 'styled-components/macro';
 
 
 const Accordion = ({ items, openItem = null }) => (
