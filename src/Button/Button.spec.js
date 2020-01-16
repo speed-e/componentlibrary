@@ -8,7 +8,7 @@ it('returns a react component', () => {
 });
 
 it('renders correctly', () => {
-    const tree = renderer.create(<Button>Hello World</Button>).toJSON();
+    const tree = renderer.create(<Button>Success</Button>).toJSON();
     expect(tree).toMatchSnapshot();
 });
 });
