@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
+import 'jest-styled-components'
+
 
 const StyledAccordionItemHeader = styled.h3`
 background-color: #eee;
