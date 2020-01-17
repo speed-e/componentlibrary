@@ -1,7 +1,8 @@
 name: Node CI
 
-on: [push]
-      paths-ignore:
+on:
+  push:
+    paths-ignore:
       - '**/*-.test.js'
       
 jobs:
