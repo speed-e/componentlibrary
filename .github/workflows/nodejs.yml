@@ -42,4 +42,5 @@ jobs:
         run: npm run deploy-storybook
 
       env:
+        NODE_AUTH_TOKEN: ${{ secrets.PAT }}
         CI: true
