@@ -39,7 +39,7 @@ jobs:
         npm test --if-present
 
     - name: deploy to GH Pages
-        run: npm run deploy-storybook
+      run: npm run deploy-storybook
 
       env:
         NODE_AUTH_TOKEN: ${{ secrets.PAT }}
