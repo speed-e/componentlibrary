@@ -1,7 +1,10 @@
 name: Node CI
 
-on: [push]
-
+on:
+  push:
+    paths-ignore:
+      - '**/*-.test.js'
+      
 jobs:
   build:
 
@@ -34,6 +37,10 @@ jobs:
     - name: npm test
       run: |
         npm test --if-present
-        
+
+    - name: deploy to GH Pages
+      run: npm run deploy-storybook
+
       env:
+        NODE_AUTH_TOKEN: ${{ secrets.PAT }}
         CI: true

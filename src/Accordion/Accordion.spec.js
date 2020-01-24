@@ -1,7 +1,7 @@
 import React from 'react';
-import { mount } from 'enzyme'
+import { mount } from 'enzyme';
 import 'jest-styled-components';
-import Accordion from './Accordion.js';
+import Accordion from './Accordion';
 
 describe('Accordion', () => {
 it('returns a react component', () => {
