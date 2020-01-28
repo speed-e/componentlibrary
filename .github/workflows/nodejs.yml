@@ -14,7 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [8.x, 10.x, 12.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -33,12 +33,18 @@ jobs:
         npm ci
         npm run lint --if-present
         npm run build --if-present
+
+    - name: npm test
+      run: |
+        npm test --if-present
+
+    - name: deploy to GH Pages
+      run: npm run deploy-storybook
           
     - name: applitools
       run: |
         export APPLITOOLS_BATCH_ID=`echo $SHA8`
-        npm run storybook
-        npm run eyes-storybook
+        npm run eyes-storybook -u https://speed-e.github.io/componentlibrary/?path=/story/*
 
       env:
         SHA8: ${GITHUB_SHA::8}
