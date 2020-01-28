@@ -42,7 +42,7 @@ jobs:
       run: npm run deploy-storybook
           
     - name: applitools
-      run:: npm eyes-storybook
+      run: npm eyes-storybook
 
       env:
         NODE_AUTH_TOKEN: ${{ secrets.PAT }}
