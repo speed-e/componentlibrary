@@ -35,9 +35,12 @@ jobs:
         npm run build --if-present
           
     - name: applitools
-      run: npm run eyes-storybook
+      run: |
+        export APPLITOOLS_BATCH_ID=`echo $SHA8`
+        npm run eyes-storybook
 
       env:
+        SHA8: ${GITHUB_SHA::8}
         APPLITOOLS_API_KEY: CwEkK7uiI4107FPoMCtEDtoyGrbf7109rSU6U3xReLhx53w110
         NODE_AUTH_TOKEN: ${{ secrets.PAT }}
         CI: true
