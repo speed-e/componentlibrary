@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "jest": "jest .spec.js",
     "test": "react-scripts test",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages",
     "eyes-storybook": "eyes-storybook"
   },
   "keywords": [],
@@ -15,6 +17,9 @@
   "dependencies": {
     "@storybook/addon-a11y": "^5.3.4",
     "@storybook/addon-info": "^5.3.3",
+    "@storybook/preset-create-react-app": "^1.5.1",
+    "jest": "^24.9.0",
+    "jest-styled-components": "^7.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "^3.3.0",
@@ -33,6 +38,7 @@
     "@storybook/addons": "^5.3.4",
     "@storybook/preset-create-react-app": "^1.5.1",
     "@storybook/react": "^5.3.4",
+    "@storybook/storybook-deployer": "^2.8.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.6",
     "react-is": "^16.12.0",
