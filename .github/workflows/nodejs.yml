@@ -33,13 +33,6 @@ jobs:
         npm ci
         npm run lint --if-present
         npm run build --if-present
-
-    - name: npm test
-      run: |
-        npm test --if-present
-
-    - name: deploy to GH Pages
-      run: npm run deploy-storybook
           
     - name: applitools
       run: npm eyes-storybook
