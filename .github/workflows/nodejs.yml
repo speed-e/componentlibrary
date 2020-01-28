@@ -37,6 +37,7 @@ jobs:
     - name: applitools
       run: |
         export APPLITOOLS_BATCH_ID=`echo $SHA8`
+        npm run storybook
         npm run eyes-storybook
 
       env:
