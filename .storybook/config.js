@@ -18,7 +18,6 @@ setAddon(JSXAddon);
 const req = requireContext('../src', true, /.stories.js$/)
 
 function loadStories() {
-    require('./welcomeStory')
     req.keys().forEach(file => req(file))
 }
 

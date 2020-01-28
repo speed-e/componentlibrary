@@ -34,6 +34,10 @@ jobs:
     - name: npm test
       run: |
         npm test --if-present
-        
+      
+    - name: applitools
+      run:: |
+        npm eyes-storybook
+
       env:
         CI: true
