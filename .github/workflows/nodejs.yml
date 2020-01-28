@@ -36,9 +36,8 @@ jobs:
           
     - name: applitools
       run: npm run eyes-storybook
-      env: 
-        APPLITOOLS_API_KEY: CwEkK7uiI4107FPoMCtEDtoyGrbf7109rSU6U3xReLhx53w110
 
       env:
+        APPLITOOLS_API_KEY: CwEkK7uiI4107FPoMCtEDtoyGrbf7109rSU6U3xReLhx53w110
         NODE_AUTH_TOKEN: ${{ secrets.PAT }}
         CI: true
