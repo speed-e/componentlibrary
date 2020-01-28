@@ -14,7 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [12.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -35,7 +35,7 @@ jobs:
         npm run build --if-present
           
     - name: applitools
-      run: npm eyes-storybook
+      run: npm run eyes-storybook
 
       env:
         NODE_AUTH_TOKEN: ${{ secrets.PAT }}
