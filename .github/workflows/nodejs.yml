@@ -36,8 +36,8 @@ jobs:
 
     - name: deploy to GH Pages
       run: |
-        npm run build-storybook
-        npm run deploy-storybook -- --ci
+        npm run build-storybook -- --out=.out
+        npm run deploy-storybook -- --existing-output-dir=.out
 
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GH_PAT }}
