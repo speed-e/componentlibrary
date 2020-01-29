@@ -12,7 +12,6 @@ const req = require.context('../src', true, /\.stories\.(js|mdx)$/)
 
 
 function loadStories() {
-    require('./welcomeStory')
     req.keys().forEach(file => req(file))
 }
 
