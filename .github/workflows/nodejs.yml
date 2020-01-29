@@ -35,9 +35,8 @@ jobs:
         npm run build --if-present
 
     - name: deploy to GH Pages
-      run: npm run deploy-storybook -- --ci --host-token-env-variable=$NODE_AUTH_TOKEN
+      run: npm run deploy-storybook -- --ci
 
       env:
-        BRANCH: gh-pages
-        NODE_AUTH_TOKEN: ${{ secrets.PAT }}
+        NODE_AUTH_TOKEN: ${{ secrets.GH_PAT }}
         CI: true
