@@ -4,8 +4,8 @@ import { storiesOf } from '@storybook/react';
 import { color } from '@storybook/addon-knobs/react';
 
 storiesOf('Button', module)
-.addWithJSX('with background 1', () => (
-    <Button bg={color('bg', '#4CAF50', 'group1')}>Success</Button>
+.addWithJSX('with background 3', () => (
+    <Button bg={color('bg', 'red', 'group1')}>Success</Button>
 ))
 
 .addWithJSX('with background 2', () => (
