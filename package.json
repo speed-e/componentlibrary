@@ -7,7 +7,7 @@
     "jest": "jest .spec.js",
     "test": "react-scripts test",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -- --out=.out",
     "deploy-storybook": "storybook-to-ghpages"
   },
   "keywords": [],
