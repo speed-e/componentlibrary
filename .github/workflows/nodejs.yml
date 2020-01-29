@@ -36,6 +36,9 @@ jobs:
 
     - name: deploy to GH Pages
       run: npm run deploy-storybook
+      with: 
+        BRANCH: gh-pages
+        ACCESS_TOKEN: ${{ secrets.GH_PAT }}
 
       env:
         NODE_AUTH_TOKEN: ${{ secrets.PAT }}
