@@ -45,5 +45,5 @@ jobs:
       env:
         SHA8: ${GITHUB_SHA::8}
         APPLITOOLS_API_KEY: CwEkK7uiI4107FPoMCtEDtoyGrbf7109rSU6U3xReLhx53w110
-        ACCESS_TOKEN: ${{ secrets.PAT }}
+        ACCESS_TOKEN: ${{ secrets.GH_PAT }}
         CI: true
