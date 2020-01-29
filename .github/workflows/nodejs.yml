@@ -34,13 +34,13 @@ jobs:
         npm run lint --if-present
         npm run build --if-present
 
-    - name: deploy to GH Pages
-      run: npm run deploy-storybook
+    # - name: deploy to GH Pages
+    #   run: npm run deploy-storybook
           
-    # - name: applitools
-    #   run: |
-    #     export APPLITOOLS_BATCH_ID=`echo $SHA8`
-    #     npx eyes-storybook -u=https://speed-e.github.io/componentlibrary/
+    - name: applitools
+      run: |
+        export APPLITOOLS_BATCH_ID=`echo $SHA8`
+        npx eyes-storybook -u=https://speed-e.github.io/componentlibrary/
 
       env:
         SHA8: ${GITHUB_SHA::8}
