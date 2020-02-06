@@ -36,8 +36,8 @@ jobs:
 
     - name: install Azure CLI
       run: |
-        curl -L https://aka.ms/InstallAzureCli | bash
-        az login
+        npm install -g azure-cli
+        azure login
 
     - name: deploy to GH Pages
       run: npm run deploy-storybook
