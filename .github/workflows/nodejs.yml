@@ -34,10 +34,6 @@ jobs:
         npm run lint --if-present
         npm run build --if-present
 
-    - name: npm test
-      run: |
-        npm test --if-present
-
     - name: install Azure CLI
       run: |
         curl -L https://aka.ms/InstallAzureCli | bash
