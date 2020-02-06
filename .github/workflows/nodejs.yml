@@ -37,15 +37,19 @@ jobs:
     - name: build Storybook
       run: npm run build-storybook
 
-    - uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-      run: |
-        az webapp list --query "[?state=='Running']"
-
     - name: deploy to GH Pages
       run: npm run deploy-storybook
 
       env:
         NODE_AUTH_TOKEN: ${{ secrets.PAT }}
         CI: true
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    
+    - run: |
+        az webapp list --query "[?state=='Running']"
