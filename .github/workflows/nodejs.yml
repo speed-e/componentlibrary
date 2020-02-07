@@ -49,7 +49,7 @@ jobs:
     
     - uses: azure/login@v1
       with:
-        creds: ${{ secrets.NEW_AZURE_CREDS }}
+        creds: ${{ secrets.AZURE_DETAILS }}
     
     - run: |
         az webapp list --query "[?state=='Running']"
