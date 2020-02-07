@@ -47,7 +47,7 @@ jobs:
       with:
         azcliversion: latest
         inlineScript: |
-          az storage blob upload-batch  -d \$web -s storybook-static
+          az storage blob upload-batch  -d \$web -s storybook-static --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }}
       
       env:
         NODE_AUTH_TOKEN: ${{ secrets.PAT }}
