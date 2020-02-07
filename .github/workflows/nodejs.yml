@@ -23,6 +23,11 @@ jobs:
       run: echo ::set-output name=nvm_node_version::$(cat .nvmrc)
       id: nvm
 
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
     - name: Use Node.js ${{ steps.nvm.outputs.nvm_node_version }}
       uses: actions/setup-node@v1
       with:
@@ -35,21 +40,15 @@ jobs:
         npm run build --if-present
 
     - name: build Storybook
-      run: npm run build-storybook
+      run: npm run build-storybook --output-dir=$GITHUB_WORKSPACE/storybook-static
 
-    - name: deploy to GH Pages
-      run: npm run deploy-storybook
-
+    - name: Deploy Storybook to Azure
+      uses: Azure/cli@v1.0.0
+      with:
+        azcliversion: latest
+        inlineScript: |
+          az storage blob upload-batch -s $GITHUB_WORKSPACE/storybook-static -d \$web --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }}
+      
       env:
         NODE_AUTH_TOKEN: ${{ secrets.PAT }}
         CI: true
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-    
-    - uses: azure/login@v1
-      with:
-        creds: ${{ secrets.ONE_MORE_TEST }}
-    
-    - run: |
-        az webapp list --query "[?state=='Running']"
