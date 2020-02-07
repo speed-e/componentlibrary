@@ -48,7 +48,14 @@ jobs:
         azcliversion: latest
         inlineScript: |
           az storage blob upload-batch  -d \$web -s storybook-static --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }}
+    
+    - name: applitools
+      run: |
+        export APPLITOOLS_BATCH_ID=`echo $SHA8`
+        npx eyes-storybook -u=${{ secrets.COMPONENT_LIBRARY_URL }}
       
       env:
+        SHA8: ${GITHUB_SHA::8}
+        APPLITOOLS_API_KEY: CwEkK7uiI4107FPoMCtEDtoyGrbf7109rSU6U3xReLhx53w110
         NODE_AUTH_TOKEN: ${{ secrets.PAT }}
         CI: true
