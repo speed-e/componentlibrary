@@ -8,7 +8,8 @@
     "test": "react-scripts test",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages"
+    "deploy-storybook": "storybook-to-ghpages",
+    "eyes-storybook": "eyes-storybook"
   },
   "keywords": [],
   "author": "",
@@ -28,6 +29,7 @@
     "styled-components": "^5.0.0"
   },
   "devDependencies": {
+    "@applitools/eyes-storybook": "^3.2.3",
     "@storybook/addon-actions": "^5.3.4",
     "@storybook/addon-docs": "^5.3.3",
     "@storybook/addon-knobs": "^5.3.3",
