@@ -47,7 +47,7 @@ jobs:
       with:
         azcliversion: latest
         inlineScript: |
-          az storage blob upload-batch -s storybook-static -d \$web --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }} --auth-mode login
+          az storage blob upload-batch -s storybook-static -d \$web --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }} --auth-mode key --account-key ${{ secrets.AZURE_ACCOUNT_KEY }}
       
       env:
         NODE_AUTH_TOKEN: ${{ secrets.PAT }}
