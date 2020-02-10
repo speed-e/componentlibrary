@@ -51,11 +51,11 @@ jobs:
     
     - name: applitools
       run: |
+        export APPLITOOLS_API_KEY=${{ secrets.APPLITOOLS_API_KEY }}
         export APPLITOOLS_BATCH_ID=`echo $SHA8`
         npx eyes-storybook -u=${{ secrets.COMPONENT_LIBRARY_URL }}
       
       env:
         SHA8: ${GITHUB_SHA::8}
-        APPLITOOLS_API_KEY: CwEkK7uiI4107FPoMCtEDtoyGrbf7109rSU6U3xReLhx53w110
         NODE_AUTH_TOKEN: ${{ secrets.PAT }}
         CI: true
