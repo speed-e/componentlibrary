@@ -14,7 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [12.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -34,13 +34,28 @@ jobs:
         npm run lint --if-present
         npm run build --if-present
 
-    - name: npm test
+    - name: build Storybook
+      run: npm run build-storybook
+
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Deploy Storybook to Azure
+      uses: Azure/cli@v1.0.0
+      with:
+        azcliversion: latest
+        inlineScript: |
+          az storage blob upload-batch  -d \$web -s storybook-static --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }}
+    
+    - name: applitools
       run: |
-        npm test --if-present
-
-    - name: deploy to GH Pages
-      run: npm run deploy-storybook
-
+        export APPLITOOLS_API_KEY=${{ secrets.APPLITOOLS_API_KEY }}
+        export APPLITOOLS_BATCH_ID=`echo $SHA8`
+        npx eyes-storybook -u=${{ secrets.COMPONENT_LIBRARY_URL }}
+      
       env:
+        SHA8: ${GITHUB_SHA::8}
         NODE_AUTH_TOKEN: ${{ secrets.PAT }}
         CI: true
