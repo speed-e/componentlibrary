@@ -48,7 +48,6 @@ jobs:
     #     azcliversion: latest
     #     inlineScript: |
     #       az storage blob upload-batch  -d \$web -s storybook-static --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }}
-    
     # - name: Applitools
     #   run: |
     #     export APPLITOOLS_API_KEY=${{ secrets.APPLITOOLS_API_KEY }}
