@@ -55,6 +55,9 @@ jobs:
         export APPLITOOLS_BATCH_ID=`echo $SHA8`
         npx eyes-storybook -u=${{ secrets.COMPONENT_LIBRARY_URL }}
       
+    - name: Bump version
+      run: npx semantic-release
+
       env:
         SHA8: ${GITHUB_SHA::8}
         NODE_AUTH_TOKEN: ${{ secrets.PAT }}
