@@ -54,13 +54,8 @@ jobs:
         export APPLITOOLS_API_KEY=${{ secrets.APPLITOOLS_API_KEY }}
         export APPLITOOLS_BATCH_ID=`echo $SHA8`
         npx eyes-storybook -u=${{ secrets.COMPONENT_LIBRARY_URL }}
-      
-    - name: Release
-      run: npx semantic-release
 
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         SHA8: ${GITHUB_SHA::8}
         NODE_AUTH_TOKEN: ${{ secrets.PAT }}
         CI: true
