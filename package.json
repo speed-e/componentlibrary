@@ -29,6 +29,8 @@
     "styled-components": "^5.0.0"
   },
   "devDependencies": {
+    "@actions/core": "^1.2.2",
+    "@actions/exec": "^1.0.3",
     "@applitools/eyes-storybook": "^3.2.5",
     "@storybook/addon-actions": "^5.3.4",
     "@storybook/addon-docs": "^5.3.3",
