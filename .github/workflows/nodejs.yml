@@ -49,7 +49,7 @@ jobs:
         inlineScript: |
           az storage blob upload-batch  -d \$web -s storybook-static --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }}
     
-    - name: applitools
+    - name: Applitools
       run: |
         export APPLITOOLS_API_KEY=${{ secrets.APPLITOOLS_API_KEY }}
         export APPLITOOLS_BATCH_ID=`echo $SHA8`
