@@ -34,26 +34,26 @@ jobs:
         npm run lint --if-present
         npm run build --if-present
 
-    - name: build Storybook
-      run: npm run build-storybook
+    # - name: build Storybook
+    #   run: npm run build-storybook
 
-    - name: Login to Azure
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    # - name: Login to Azure
+    #   uses: azure/login@v1
+    #   with:
+    #     creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-    - name: Deploy Storybook to Azure
-      uses: Azure/cli@v1.0.0
-      with:
-        azcliversion: latest
-        inlineScript: |
-          az storage blob upload-batch  -d \$web -s storybook-static --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }}
+    # - name: Deploy Storybook to Azure
+    #   uses: Azure/cli@v1.0.0
+    #   with:
+    #     azcliversion: latest
+    #     inlineScript: |
+    #       az storage blob upload-batch  -d \$web -s storybook-static --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }}
     
-    - name: applitools
-      run: |
-        export APPLITOOLS_API_KEY=${{ secrets.APPLITOOLS_API_KEY }}
-        export APPLITOOLS_BATCH_ID=`echo $SHA8`
-        npx eyes-storybook -u=${{ secrets.COMPONENT_LIBRARY_URL }}
+    # - name: applitools
+    #   run: |
+    #     export APPLITOOLS_API_KEY=${{ secrets.APPLITOOLS_API_KEY }}
+    #     export APPLITOOLS_BATCH_ID=`echo $SHA8`
+    #     npx eyes-storybook -u=${{ secrets.COMPONENT_LIBRARY_URL }}
       
     - name: Release
       run: npx semantic-release
