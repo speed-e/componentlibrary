@@ -56,7 +56,7 @@ jobs:
         npx eyes-storybook -u=${{ secrets.COMPONENT_LIBRARY_URL }}
       
     - name: Release
-        run: npx semantic-release
+      run: npx semantic-release
 
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
