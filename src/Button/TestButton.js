@@ -3,7 +3,7 @@ import React from 'react';
 const StyledTestButton = {
 border: 'none',
 backgroundColor: 'black',
-color: 'black', 
+color: 'brown', 
 padding: '14px 28px', 
 cursor: 'pointer', 
 fontSize: '14px'

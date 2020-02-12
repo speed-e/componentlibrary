@@ -3,6 +3,27 @@ import { Button } from './Button';
 import { TestButton } from './TestButton';
 import { storiesOf } from '@storybook/react';
 import { color } from '@storybook/addon-knobs/react';
+import { withA11y} from '@storybook/addon-a11y';
+
+export default {
+    title: 'button',
+    decorators: [withA11y],
+    parameters: {
+      a11y: {
+        config: {
+            runOnly: {
+                type: "tag", 
+                values: ['wcag2a','wcag2aa'],
+                resultTypes: ['violations','incomplete'],
+            },
+            "rules": {
+                "color-contrast": { enabled: true },
+                "button-name": { enabled: true }
+              },
+        },
+      },
+    },
+  };
 
 storiesOf('Button', module)
 .addWithJSX('with background 1', () => (
