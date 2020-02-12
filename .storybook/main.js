@@ -7,6 +7,7 @@ addons: [
   '@storybook/addon-knobs/register',
   '@storybook/addon-notes/register',
   '@storybook/addon-docs',
-  '@storybook/preset-create-react-app'
+  '@storybook/preset-create-react-app',
+  '@storybook/addon-a11y/register',
   ],
   };
