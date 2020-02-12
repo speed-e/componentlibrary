@@ -1,1 +1,2 @@
-titleOnly: true
+commitsOnly: true
+anyCommit: true 
