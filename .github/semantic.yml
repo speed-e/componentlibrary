@@ -1,5 +1,4 @@
-commitsOnly: true
-anyCommit: true 
+titleOnly: true
 types:
   - major
   - minor
