@@ -1,2 +1,10 @@
 commitsOnly: true
 anyCommit: true 
+types:
+  - feat
+  - fix
+  - chore
+  - BREAKING CHANGE
+  - revert
+  - test
+  - refactor
