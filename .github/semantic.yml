@@ -1,2 +1,6 @@
 commitsOnly: true
 anyCommit: true 
+types:
+  - major
+  - minor
+  - patch
