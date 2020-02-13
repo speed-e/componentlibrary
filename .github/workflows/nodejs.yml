@@ -42,12 +42,12 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-    - name: Deploy Storybook to Azure
-      uses: Azure/cli@v1.0.0
-      with:
-        azcliversion: latest
-        inlineScript: |
-          az storage blob upload-batch  -d \$web -s storybook-static --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }}
+    # - name: Deploy Storybook to Azure
+    #   uses: Azure/cli@v1.0.0
+    #   with:
+    #     azcliversion: latest
+    #     inlineScript: |
+    #       az storage blob upload-batch  -d \$web -s storybook-static --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }}
     
     # - name: Applitools
     #   run: |
