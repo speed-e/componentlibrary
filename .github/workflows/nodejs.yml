@@ -55,8 +55,7 @@ jobs:
         export APPLITOOLS_BATCH_ID=`echo $SHA8`
         npx eyes-storybook -u=${{ secrets.COMPONENT_LIBRARY_URL }}
       
-    - name: Release
-      run: npx semantic-release
+
 
       env:
         SHA8: ${GITHUB_SHA::8}
