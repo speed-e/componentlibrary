@@ -2,14 +2,12 @@
 import {  configure, setAddon, addDecorator } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs/react';
 import JSXAddon from 'storybook-addon-jsx';
+import requireContext from 'require-context.macro'
+
 setAddon(JSXAddon);
 addDecorator(withKnobs);
 
-// configure(require.context('../src', true, /\.stories\.(js|mdx)$/), module);
-
-const req = require.context('../src', true, /\.stories\.(js|mdx)$/)
-// const req = require.context('../src', true, /.stories.js$/)
-
+const req = requireContext('../src', true, /\.stories\.(js|mdx)$/)
 
 function loadStories() {
     req.keys().forEach(file => req(file))

@@ -1,13 +1,13 @@
 import renderer from 'react-test-renderer';
-import Button from './Button';
+import TestButton from './TestButton';
 
 describe('Button', () => {
 it('returns a react component', () => {
-    expect(typeof Button).toBe('function');
+    expect(typeof TestButton).toBe('function');
 });
 
 it('renders correctly', () => {
-    const tree = renderer.create('<Button>Success</Button>').toJSON();
+    const tree = renderer.create('<TestButton>Success</TestButton>').toJSON();
     expect(tree).toMatchSnapshot();
 });
 });

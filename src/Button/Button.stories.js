@@ -1,11 +1,16 @@
 import React from 'react';
 import { Button } from './Button';
+import { TestButton } from './TestButton';
 import { storiesOf } from '@storybook/react';
 import { color } from '@storybook/addon-knobs/react';
 
 storiesOf('Button', module)
 .addWithJSX('with background 1', () => (
     <Button bg={color('bg', '#4CAF50', 'group1')}>Success</Button>
+))
+
+.addWithJSX('Test Button', () => (
+    <TestButton>Test Button</TestButton>
 ))
 
 .addWithJSX('with background 2', () => (
