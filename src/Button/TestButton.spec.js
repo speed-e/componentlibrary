@@ -1,5 +1,5 @@
 import renderer from 'react-test-renderer';
-import TestButton from './TestButton';
+import { TestButton } from './TestButton';
 
 describe('Button', () => {
 it('returns a react component', () => {
