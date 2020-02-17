@@ -82,19 +82,19 @@ jobs:
         inlineScript: |
           az storage blob upload-batch  -d \$web -s storybook-static --account-name ${{ secrets.MASTER_ACCOUNT_NAME }}
 
-    - name: Applitools
-      if: github.ref != 'refs/heads/master'
-      run: |
-        export APPLITOOLS_API_KEY=${{ secrets.APPLITOOLS_API_KEY }}
-        export APPLITOOLS_BATCH_ID=`echo $SHA8`
-        npx eyes-storybook -u=`https://${GITHUB_SHA::8}.z33.web.core.windows.net/`
+    # - name: Applitools
+    #   if: github.ref != 'refs/heads/master'
+    #   run: |
+    #     export APPLITOOLS_API_KEY=${{ secrets.APPLITOOLS_API_KEY }}
+    #     export APPLITOOLS_BATCH_ID=`echo $SHA8`
+    #     npx eyes-storybook -u=`https://${GITHUB_SHA::8}.z33.web.core.windows.net/`
 
-    - name: Applitools on master
-      if: github.ref == 'refs/heads/master'
-      run: |
-        export APPLITOOLS_API_KEY=${{ secrets.APPLITOOLS_API_KEY }}
-        export APPLITOOLS_BATCH_ID=`echo $SHA8`
-        npx eyes-storybook -u=${{ secrets.MASTER_ACCOUNT_URL }}
+    # - name: Applitools on master
+    #   if: github.ref == 'refs/heads/master'
+    #   run: |
+    #     export APPLITOOLS_API_KEY=${{ secrets.APPLITOOLS_API_KEY }}
+    #     export APPLITOOLS_BATCH_ID=`echo $SHA8`
+    #     npx eyes-storybook -u=${{ secrets.MASTER_ACCOUNT_URL }}
 
       env:
         SHA8: ${GITHUB_SHA::8}
