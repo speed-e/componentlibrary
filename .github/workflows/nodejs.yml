@@ -43,6 +43,7 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
     - name: Create Azure Storage account
+      if: github.ref != 'refs/heads/master'
       uses: Azure/cli@v1.0.0
       with:
         azcliversion: latest
@@ -50,6 +51,7 @@ jobs:
           az storage account create -n ${GITHUB_SHA::8} -g ${{ secrets.AZURE_RESOURCE_GROUP }} --kind StorageV2
 
     - name: Activate Blob storage static page
+      if: github.ref != 'refs/heads/master'
       uses: Azure/cli@v1.0.0
       with:
         azcliversion: latest
@@ -57,24 +59,42 @@ jobs:
           az storage blob service-properties update --static-website true --account-name ${GITHUB_SHA::8} --index-document index.html
     
     - name: Create new Blob storage container
+      if: github.ref != 'refs/heads/master'
       uses: Azure/cli@v1.0.0
       with:
         azcliversion: latest
         inlineScript: |
           az storage container create -n \$web --account-name ${GITHUB_SHA::8}
 
-    - name: Deploy Storybook to Azure
+    - name: Deploy Storybook to new Azure container
+      if: github.ref != 'refs/heads/master'
       uses: Azure/cli@v1.0.0
       with:
         azcliversion: latest
         inlineScript: |
           az storage blob upload-batch  -d \$web -s storybook-static --account-name ${GITHUB_SHA::8}
 
+    - name: Deploy Storybook to Azure master container
+      if: github.ref == 'refs/heads/master'
+      uses: Azure/cli@v1.0.0
+      with:
+        azcliversion: latest
+        inlineScript: |
+          az storage blob upload-batch  -d \$web -s storybook-static --account-name ${{ secrets.MASTER_ACCOUNT_NAME }}
+
     - name: Applitools
+      if: github.ref != 'refs/heads/master'
       run: |
         export APPLITOOLS_API_KEY=${{ secrets.APPLITOOLS_API_KEY }}
         export APPLITOOLS_BATCH_ID=`echo $SHA8`
-        npx eyes-storybook -u=${{ secrets.COMPONENT_LIBRARY_URL }}
+        npx eyes-storybook -u=`https://$SHA8.z33.web.core.windows.net/`
+
+    - name: Applitools on master
+      if: github.ref == 'refs/heads/master'
+      run: |
+        export APPLITOOLS_API_KEY=${{ secrets.APPLITOOLS_API_KEY }}
+        export APPLITOOLS_BATCH_ID=`echo $SHA8`
+        npx eyes-storybook -u=${{ secrets.MASTER_ACCOUNT_URL }}
 
       env:
         SHA8: ${GITHUB_SHA::8}
