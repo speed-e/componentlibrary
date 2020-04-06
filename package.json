@@ -1,6 +1,6 @@
 {
   "name": "@speed-e/componentlibrary",
-  "version": "4.2.3",
+  "version": "4.3.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -58,24 +58,56 @@
       "next"
     ],
     "plugins": [
-      ["@semantic-release/commit-analyzer", {
-        "preset": "angular",
-        "releaseRules": [
-          {"type": "docs", "scope": "README", "release": "patch"},
-          {"type": "refactor", "scope": "core-*", "release": "minor"},
-          {"type": "test", "release": "patch"},
-          {"type": "feat", "release": "minor"},
-          {"type": "chore", "release": "minor"},
-          {"type": "fix", "release": "patch"},
-          {"type": "refactor", "release": "patch"},
-          {"scope": "no-release", "release": false}
-        ]
-      }],
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "preset": "angular",
+          "releaseRules": [
+            {
+              "type": "docs",
+              "scope": "README",
+              "release": "patch"
+            },
+            {
+              "type": "refactor",
+              "scope": "core-*",
+              "release": "minor"
+            },
+            {
+              "type": "test",
+              "release": "patch"
+            },
+            {
+              "type": "feat",
+              "release": "minor"
+            },
+            {
+              "type": "chore",
+              "release": "minor"
+            },
+            {
+              "type": "fix",
+              "release": "patch"
+            },
+            {
+              "type": "refactor",
+              "release": "patch"
+            },
+            {
+              "scope": "no-release",
+              "release": false
+            }
+          ]
+        }
+      ],
       "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
-      ["@semantic-release/npm", {
-        "npmPublish": false
-      }],
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ],
       "@semantic-release/git"
     ]
   }
