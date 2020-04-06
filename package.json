@@ -1,6 +1,6 @@
 {
-  "name": "@speed-e/componentlibrary",
-  "version": "4.0.0",
+  "name": "componentlibrary",
+  "version": "4.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
