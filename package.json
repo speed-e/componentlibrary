@@ -93,10 +93,6 @@
               "release": "patch"
             },
             {
-              "scope": "no-release",
-              "release": false
-            },
-            {
               "scope": "style",
               "release": "patch"
             }
