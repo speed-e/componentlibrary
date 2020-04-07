@@ -1,3 +1,15 @@
+# [6.0.0](https://github.com/speed-e/componentlibrary/compare/v5.3.0...v6.0.0) (2020-04-07)
+
+
+### Features
+
+* this should be ignored ([7d84df3](https://github.com/speed-e/componentlibrary/commit/7d84df35aad834eec80b675df2737113940a8a4e))
+
+
+### BREAKING CHANGES
+
+* as we have a breaking change
+
 # [5.3.0](https://github.com/speed-e/componentlibrary/compare/v5.2.1...v5.3.0) (2020-04-07)
 
 
