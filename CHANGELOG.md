@@ -1,3 +1,10 @@
+# [5.3.0](https://github.com/speed-e/componentlibrary/compare/v5.2.1...v5.3.0) (2020-04-07)
+
+
+### Features
+
+* try another minor ([344c019](https://github.com/speed-e/componentlibrary/commit/344c0197a84e1a436cab36eed1502d29d997ba47))
+
 ## [5.2.1](https://github.com/speed-e/componentlibrary/compare/v5.2.0...v5.2.1) (2020-04-07)
 
 
