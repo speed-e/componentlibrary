@@ -1,3 +1,15 @@
+# [9.0.0](https://github.com/speed-e/componentlibrary/compare/v8.0.0...v9.0.0) (2020-04-07)
+
+
+### Features
+
+* this should be ignored ([8046aa6](https://github.com/speed-e/componentlibrary/commit/8046aa6d4ca8bc716f26e18a6e83656486253eb3))
+
+
+### BREAKING CHANGES
+
+* as we have a breaking change
+
 # [8.0.0](https://github.com/speed-e/componentlibrary/compare/v7.0.0...v8.0.0) (2020-04-07)
 
 
