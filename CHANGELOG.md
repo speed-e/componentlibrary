@@ -1,3 +1,15 @@
+# [5.0.0](https://github.com/speed-e/componentlibrary/compare/v4.4.3...v5.0.0) (2020-04-07)
+
+
+### Features
+
+* allow provided config object to extend other configs ([cb05ee1](https://github.com/speed-e/componentlibrary/commit/cb05ee100f23ab5e5ba23c5810613f85fe874789))
+
+
+### BREAKING CHANGES
+
+* `extends` key in config file is now used for extending other config files
+
 ## [4.4.3](https://github.com/speed-e/componentlibrary/compare/v4.4.2...v4.4.3) (2020-04-07)
 
 
