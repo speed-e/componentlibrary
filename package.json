@@ -91,10 +91,6 @@
             {
               "type": "refactor",
               "release": "patch"
-            },
-            {
-              "scope": "style",
-              "release": "patch"
             }
           ]
         }
