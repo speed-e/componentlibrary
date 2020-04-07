@@ -1,3 +1,10 @@
+## [9.1.1](https://github.com/speed-e/componentlibrary/compare/v9.1.0...v9.1.1) (2020-04-07)
+
+
+### Bug Fixes
+
+* try another test ([#59](https://github.com/speed-e/componentlibrary/issues/59)) ([89f11ee](https://github.com/speed-e/componentlibrary/commit/89f11eeecde3ee9c98048a13859f015ee9086fd3))
+
 # [9.1.0](https://github.com/speed-e/componentlibrary/compare/v9.0.0...v9.1.0) (2020-04-07)
 
 
