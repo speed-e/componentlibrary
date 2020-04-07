@@ -1,3 +1,10 @@
+# [9.1.0](https://github.com/speed-e/componentlibrary/compare/v9.0.0...v9.1.0) (2020-04-07)
+
+
+### Features
+
+* minor bump test ([#57](https://github.com/speed-e/componentlibrary/issues/57)) ([c8891e6](https://github.com/speed-e/componentlibrary/commit/c8891e623a8353fd21847af44b879433bd2e00d1))
+
 # [9.0.0](https://github.com/speed-e/componentlibrary/compare/v8.0.0...v9.0.0) (2020-04-07)
 
 
