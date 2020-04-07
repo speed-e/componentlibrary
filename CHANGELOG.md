@@ -1,3 +1,10 @@
+## [5.1.1](https://github.com/speed-e/componentlibrary/compare/v5.1.0...v5.1.1) (2020-04-07)
+
+
+### Bug Fixes
+
+* try running a patch bump ([c5379a4](https://github.com/speed-e/componentlibrary/commit/c5379a4d617626ac9cf1c44ad0918488875e993c))
+
 # [5.1.0](https://github.com/speed-e/componentlibrary/compare/v5.0.0...v5.1.0) (2020-04-07)
 
 
