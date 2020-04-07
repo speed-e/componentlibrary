@@ -5,7 +5,7 @@ import AccordionItem from './AccordionItem';
 const Accordion = ({ items, openItem = null }) => (
   <div>
     {items.map(({ id, title, content }) => (
-      <AccordionItem {...{ id }} isOpen={id === openItem} />
+      <AccordionItem {...{ id, title, content }} isOpen={id === openItem} />
     ))}
   </div>
 );
