@@ -1,3 +1,5 @@
+# [4.4.0](https://github.com/speed-e/componentlibrary/compare/v4.3.1...v4.4.0) (2020-04-07)
+
 ## [4.3.1](https://github.com/speed-e/componentlibrary/compare/v4.3.0...v4.3.1) (2020-04-06)
 
 
