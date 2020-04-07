@@ -1,3 +1,19 @@
+# [8.0.0](https://github.com/speed-e/componentlibrary/compare/v7.0.0...v8.0.0) (2020-04-07)
+
+
+### Styles
+
+* try minor bump ([#56](https://github.com/speed-e/componentlibrary/issues/56)) ([2ba9b58](https://github.com/speed-e/componentlibrary/commit/2ba9b5868b2a72691440b545084be1bc20f80846))
+
+
+### BREAKING CHANGES
+
+* as we have a breaking change
+
+* feat: minor bumpy bump
+
+Co-authored-by: Your Name <you@example.com>
+
 # [7.0.0](https://github.com/speed-e/componentlibrary/compare/v6.0.0...v7.0.0) (2020-04-07)
 
 
