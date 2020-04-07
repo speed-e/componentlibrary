@@ -1,3 +1,10 @@
+## [4.4.2](https://github.com/speed-e/componentlibrary/compare/v4.4.1...v4.4.2) (2020-04-07)
+
+
+### Bug Fixes
+
+* package.json update ([c535b50](https://github.com/speed-e/componentlibrary/commit/c535b50ab96a3a5dbc8153a0e1ce5d0eb48329f0))
+
 ## [4.4.1](https://github.com/speed-e/componentlibrary/compare/v4.4.0...v4.4.1) (2020-04-07)
 
 # [4.4.0](https://github.com/speed-e/componentlibrary/compare/v4.3.1...v4.4.0) (2020-04-07)
