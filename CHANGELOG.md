@@ -1,3 +1,10 @@
+## [4.4.3](https://github.com/speed-e/componentlibrary/compare/v4.4.2...v4.4.3) (2020-04-07)
+
+
+### Bug Fixes
+
+* test removing content ([219f306](https://github.com/speed-e/componentlibrary/commit/219f306a4050b4366bfbd475ed70457b4453022f))
+
 ## [4.4.2](https://github.com/speed-e/componentlibrary/compare/v4.4.1...v4.4.2) (2020-04-07)
 
 
